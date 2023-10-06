@@ -14,6 +14,7 @@ export default function Favorites() {
   return favorites.length ? (
     favorites.map((event) => (
       <div key={event.id}>
+        <p>{event.artist_name}</p>
         <Event event={event} />
         <button
           onClick={() => {

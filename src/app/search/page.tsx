@@ -98,7 +98,10 @@ export default function Search({
           <Event event={event} />
           <button
             onClick={() => {
-              setFavorites([...favorites, event]);
+              setFavorites([
+                ...favorites,
+                { ...event, artist_name: artist!.name },
+              ]);
             }}
           >
             like
