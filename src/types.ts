@@ -12,7 +12,8 @@ export type Artist = {
       | "itunes"
       | "youtube"
       | "instagram"
-      | "facebook";
+      | "facebook"
+      | "soundcloud";
     url: string;
   }[];
 };
@@ -30,4 +31,10 @@ export type ArtistEvent = {
     region?: string;
     country: string;
   };
+  offers: {
+    status: "available";
+    type: "Tickets";
+    url: string;
+  }[];
+  lineup: string[];
 };

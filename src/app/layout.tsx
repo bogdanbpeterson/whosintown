@@ -18,8 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <Providers>
-      <html lang="en">
-        <body className={inter.className}>
+      <html className="h-full" lang="en">
+        <body
+          className={`${inter.className} m-auto flex h-full max-w-6xl justify-between gap-5 p-4`}
+        >
           {children}
           <Favorites />
         </body>
