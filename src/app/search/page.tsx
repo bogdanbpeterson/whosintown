@@ -7,6 +7,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useAtom } from "jotai";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { Fragment } from "react";
 
 export default function Search({
   searchParams,
@@ -238,16 +239,12 @@ export default function Search({
               <p>
                 Lineup:{" "}
                 {details.lineup.map((artistInLine, idx) => (
-                  <>
-                    <a
-                      className="underline"
-                      key={artistInLine}
-                      href={`/search?q=${artistInLine}`}
-                    >
+                  <Fragment key={artistInLine}>
+                    <a className="underline" href={`/search?q=${artistInLine}`}>
                       {artistInLine}
                     </a>
                     {idx !== details.lineup.length - 1 ? ", " : null}
-                  </>
+                  </Fragment>
                 ))}
               </p>
             ) : null}
