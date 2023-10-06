@@ -1,24 +1,21 @@
 export default function Home() {
   return (
     <main className="flex h-full w-full flex-col items-start justify-center gap-6">
-      <h1 className="text-3xl font-bold text-amber-950">Who&apos;s in town?</h1>
+      <h1 className="text-3xl font-bold">Who&apos;s in town?</h1>
       <form
-        className="flex w-full gap-4"
+        className="flex w-full"
         method="get"
         action="/search"
         autoComplete="off"
       >
         <input
-          className="w-full max-w-lg border-2 border-amber-700 bg-amber-200 p-3 text-amber-600 outline-none placeholder:text-amber-500 focus-within:ring-2 focus-within:ring-amber-800"
+          className="w-full max-w-lg border-2 border-black p-3 outline-none placeholder:text-black "
           type="text"
           name="q"
           placeholder="Search for artists"
           required
         />
-        <button
-          className="border-2 border-amber-700 bg-amber-200 p-3 text-amber-600"
-          type="submit"
-        >
+        <button className="bg-black p-3 text-white" type="submit">
           search
         </button>
       </form>
